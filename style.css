@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+nav {
+    display:flex;
+
+    justify-content: center;
+    background-color: rgb(255, 210, 159);
+    color : rgb(0, 0, 0);
+    height: 80px;
+    font-size: 50px;
+} 
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    padding: 20px;
+    position: relative;
+}
+
+.container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 8vw;
+}
+
+.container div:hover{
+    cursor:default;
+    background-color: rgb(255, 215, 159);
+}
+.line{
+    height: 3px;
+    width: 0;
+    background-color: rgb(255, 197, 97);
+    position: absolute;
+    border: none !important;
+    transition: width 1s ease-in-out;
+}
+.gameDetails{
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    
+}
+
+.side-info{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    font-size: 2rem;
+}
+#reset{
+    border:none;
+    padding: 1vw ;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+#reset:hover{
+    border:none;
+    border-radius: 10px;
+    background-color: bisque;
+    cursor: pointer;
+}
+.imgbox img{
+    width: 0;
+    transition:width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0  !important;
+}
+.bl-0{
+    border-left: 0 !important;
+}
+.bt-0{
+    border-top: 0  !important;
+}
+.bb-0{
+    border-bottom: 0  !important;
+}
+@media screen and (max-width: 800px){
+    .gameContainer{
+        flex-direction: column;
+        align-items: center ;
+    }
+    .gameDetails{
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+    #reset{
+        font-size: 1rem;
+
+    }
+}
